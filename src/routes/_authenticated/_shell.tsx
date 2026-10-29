@@ -1,0 +1,10 @@
+import { createFileRoute, Outlet } from "@tanstack/react-router";
+import { DashboardShell } from "@/components/dashboard/DashboardShell";
+
+export const Route = createFileRoute("/_authenticated/_shell")({
+  component: () => (
+    <DashboardShell>
+      <Outlet />
+    </DashboardShell>
+  ),
+});
